@@ -1,0 +1,62 @@
+<!DOCTYPE web-app PUBLIC
+ "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
+ "http://java.sun.com/dtd/web-app_2_3.dtd" >
+
+<web-app>
+  <display-name>Archetype Created Web Application</display-name>
+  <listener>  
+    <listener-class>
+        servlets.ContextInitializer
+    </listener-class>
+</listener> 
+  <servlet>
+  	<servlet-name>SignUp</servlet-name>
+  	<display-name>SignUp</display-name>
+  	<description></description>
+  	<servlet-class>servlets.SignUp</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>SignIn</servlet-name>
+  	<display-name>SignIn</display-name>
+  	<description></description>
+  	<servlet-class>servlets.SignIn</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>NewOrder</servlet-name>
+  	<display-name>NewOrder</display-name>
+  	<description></description>
+  	<servlet-class>servlets.NewOrder</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetPlacedOrders</servlet-name>
+  	<display-name>GetPlacedOrders</display-name>
+  	<description></description>
+  	<servlet-class>servlets.GetPlacedOrders</servlet-class>
+  </servlet>
+  <servlet>
+  	<servlet-name>GetExecutedOrders</servlet-name>
+  	<display-name>GetExecutedOrders</display-name>
+  	<description></description>
+  	<servlet-class>servlets.GetExecutedOrders</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  	<servlet-name>SignUp</servlet-name>
+  	<url-pattern>/SignUp</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>SignIn</servlet-name>
+  	<url-pattern>/SignIn</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>NewOrder</servlet-name>
+  	<url-pattern>/NewOrder</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetPlacedOrders</servlet-name>
+  	<url-pattern>/GetPlacedOrders</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+  	<servlet-name>GetExecutedOrders</servlet-name>
+  	<url-pattern>/GetExecutedOrders</url-pattern>
+  </servlet-mapping>
+</web-app>
