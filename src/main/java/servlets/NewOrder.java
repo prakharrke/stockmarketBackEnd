@@ -61,18 +61,20 @@ public class NewOrder extends HttpServlet {
 			 .setOrderQuantity(orderQuantity)
 			 .setUserID(userName)
 			 .setorderTimeStamp(orderTimeStamp);
-		StockMarket.addToWaitingQueue(order);
-		
 		try {
 			Connection connection = DBConnection.getConnection();
 			DBCommunication dbCommunication = new DBCommunication(connection);
 			dbCommunication.addOrderToDB(order);
 			PrintWriter out = response.getWriter();
 			out.println("Order Placed");
+			StockMarket.addToWaitingQueue(order);
 		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+		
+		
+		
 		
 			
 	}
